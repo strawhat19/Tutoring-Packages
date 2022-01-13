@@ -62,7 +62,11 @@ const FullStackDeveloperCourse: React.FC = () => {
                                     <div className="index">
                                     <button onClick={(event) => {
 
-                                        let project:any = fullStackDeveloperProjects.projects[event.target.id];
+                                        let idx:number = event.target.id;
+
+                                        let project:any = fullStackDeveloperProjects.projects[idx];
+
+                                        console.log(project);
 
                                         emptyCart.push(project);
 
