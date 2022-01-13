@@ -4,7 +4,7 @@ import { fullStackDeveloperProjects } from "./fullStackDeveloperProjects";
 import './styles/courses.css';
 import cartContext from "../../contexts/cartContext";
 let unParsedcart:string = localStorage.getItem(`Shopping Cart`) || `[]`;
-let emptyCart:[] = JSON.parse(unParsedcart);
+let emptyCart = JSON.parse(unParsedcart) || [] as any;
 
 const FullStackDeveloperCourse: React.FC = () => {
 
@@ -66,9 +66,7 @@ const FullStackDeveloperCourse: React.FC = () => {
 
                                         let idx:number = target.id;
 
-                                        let project:{} = fullStackDeveloperProjects.projects[idx];
-
-                                        console.log(project);
+                                        let project:any = fullStackDeveloperProjects.projects[idx];
 
                                         emptyCart.push(project);
 

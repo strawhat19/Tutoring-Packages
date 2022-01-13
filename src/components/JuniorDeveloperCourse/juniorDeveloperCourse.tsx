@@ -4,7 +4,7 @@ import {juniorDeveloperProjects}  from "./juniorDeveloperProjects";
 import './styles/courses.css';
 import cartContext from "../../contexts/cartContext";
 let unParsedcart:string = localStorage.getItem(`Shopping Cart`) || `[]`;
-let emptyCart:[] = JSON.parse(unParsedcart);
+let emptyCart = JSON.parse(unParsedcart) || [] as any;
 
 const JuniorDeveloperCourse: React.FC = () => {
 
@@ -72,9 +72,7 @@ const JuniorDeveloperCourse: React.FC = () => {
 
                                         let idx:number = target.id;
 
-                                        let project:{} = juniorDeveloperProjects.projects[idx];
-
-                                        console.log(project);
+                                        let project:any = juniorDeveloperProjects.projects[idx];
 
                                         emptyCart.push(project);
 
