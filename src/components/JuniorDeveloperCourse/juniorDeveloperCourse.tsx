@@ -46,7 +46,7 @@ const JuniorDeveloperCourse: React.FC = () => {
                     </aside>
                     <div className="right">
                         <div className="junior projects">
-                            {juniorDeveloperProjects.projects.map((project,index) => (
+                            {juniorDeveloperProjects.projects.map((project:any,index:any) => (
                                 <div className="project" id={index+1+`-`+project.approximateCost} key={index+1+`-`+project.approximateCost}>
                                     <div className="pTitleRow">
                                         <a title="Example Demo" href={project.demo} className="projectExample"><i className="fas fa-globe"></i></a>
