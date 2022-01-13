@@ -62,7 +62,9 @@ const FullStackDeveloperCourse: React.FC = () => {
                                     <div className="index">
                                     <button onClick={(event) => {
 
-                                        let target:{} = event.target;
+                                        let target:{
+                                            id: number
+                                        } = event.target;
 
                                         let idx:number = target.id;
 
