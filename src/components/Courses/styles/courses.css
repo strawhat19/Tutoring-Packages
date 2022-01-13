@@ -1,0 +1,198 @@
+.courses {
+  background: black;
+  color: white;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.courses .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.courses .inner .course {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  grid-gap: 1em;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.courses .inner .course .left {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 0.1em;
+}
+
+.courses .inner .course .left :not(h2) {
+  padding-left: 1em;
+}
+
+.courses .inner .course .left p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.courses .inner .course .left p span {
+  width: 100%;
+  padding-top: 1em;
+}
+
+.courses .inner .course .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  height: 100%;
+}
+
+.courses .inner .course .right .projects {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  grid-gap: 1em;
+}
+
+.courses .inner .course .right .projects .project {
+  width: 100%;
+  height: 100%;
+  min-width: 400px;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+  background: var(--main);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.courses .inner .course .right .projects .project .pTitleRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 1em;
+}
+
+.courses .inner .course .right .projects .project .pTitleRow .projectData {
+  font-weight: 500;
+}
+
+.courses .inner .course .right .projects .project .pTitleRow .projectData p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  grid-gap: 0.3em;
+}
+
+.courses .inner .course .right .projects .project h3 {
+  font-size: 1.1em;
+  width: 54%;
+  text-align: left;
+}
+
+.courses .inner .course .right .projects .project p {
+  margin: 0.5em;
+}
+
+.courses .inner .course .right .projects .project a {
+  color: white;
+  font-size: 1.5em;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.courses .inner .course .right .projects .project a:hover {
+  color: white;
+}
+
+.courses .inner .course .right .projects .project a:hover i {
+  color: white;
+}
+
+.courses .inner .course .right .projects .project i {
+  color: black;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.courses .inner .course .right .projects .project .projectDescription {
+  padding-left: 1em;
+  font-weight: 400 !important;
+}
+/*# sourceMappingURL=courses.css.map */
