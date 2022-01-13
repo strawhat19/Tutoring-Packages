@@ -18,14 +18,17 @@ export default class App extends React.Component {
   }
 
   async componentDidMount() {
-    let unParsedcart:string = localStorage.getItem(`Shopping Cart`);
+    let unParsedcart:string = localStorage.getItem(`Shopping Cart`) || `[]`;
     let cart:[] = JSON.parse(unParsedcart);
     if (!cart) {
       document.querySelector(`#cartItems`)?.classList.add(`hide`);
       document.querySelector(`#cartItems`)?.classList.remove(`show`);
-    } else {
+    } else if (cart.length > 0) {
       document.querySelector(`#cartItems`)?.classList.remove(`hide`);
       document.querySelector(`#cartItems`)?.classList.add(`show`);
+    } else {
+      document.querySelector(`#cartItems`)?.classList.add(`hide`);
+      document.querySelector(`#cartItems`)?.classList.remove(`show`);
     }
   }
 
