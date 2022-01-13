@@ -1,13 +1,13 @@
 export const fullStackDeveloperProjects = {
     level: `Full Stack Developer`,
-    hourlyRate: `I charge you $35 / Hour, I record every lesson for you to keep forever, and You can quit whenever`,
+    hourlyRate: 35,
     approximateHours: 50,
     approximateCost: `$1500`,
-    target: `By the end of the last project you will be able to apply to Full Stack or Front End Developer Positions or Start Serious FreeLancing or Tutoring as a Business or Side Hustle or become a Mobile App or Game Developer, I myself was at this level for 5 years making $40,000 in year 1 to $75,000 by year 5 (Right Now 2022) and I'm currently interviewing for Senior Level Positions ranging from $90,000 - $200,000.`,
+    description: `I record every lesson for you to keep forever, and You can quit whenever. By the end of the last project you will be able to apply to Full Stack or Front End Developer Positions or Start Serious FreeLancing or Tutoring as a Business or Side Hustle or become a Mobile App or Game Developer, I myself was at this level for 5 years making $40,000 in year 1 to $75,000 by year 5 (Right Now 2022) and I'm currently interviewing for Senior Level Positions ranging from $90,000 - $200,000.`,
     salary: `MINIMUM $60,000 - $150,000 or MINIMUM $20 - $30 an hour.`,
   
     techStack: {
-      description: `These are the technologies you will learn by the end of the last project`,
+      description: `These are the technologies you will learn by the end of the last project:`,
       technologies: [
         `CMS`,
         `Wix`,

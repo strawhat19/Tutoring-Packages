@@ -30,17 +30,15 @@ const JuniorDeveloperCourse: React.FC = () => {
     return (
         // Add Course Form
         <div className="courses">
-            <h1 className="title">^ Temporary Header</h1>
             <h1 className="title">Tutoring Packages</h1>
-            <h1 className="title">No Code Experience to Full Stack Developer - Courses</h1>
             <div className="inner">
                 <div className="junior course">
                     <aside className="left">
-                    <h2 className="junior subtitle">Become A {juniorDeveloperProjects.level}</h2>
-                        <p className="junior timeAndCost">Total Projects | Approximate Time & Cost<span className="value tp"> <i className="fas fa-project-diagram"></i> {juniorProjects} Projects<i className="fas fa-dollar-sign"></i> {juniorCost}<i className="fas fa-clock"></i>  Approximately {juniorHours} Hour's</span></p>
-                        <p className="junior rate">Tutoring Rate<span className="value"> <i className="fas fa-code"></i> {juniorDeveloperProjects.hourlyRate}</span></p>
-                        <p className="junior target">Target Goals During This Time<span className="value"> <i className="fas fa-bullseye"></i> {juniorDeveloperProjects.target}</span></p>
+                        <h2 className="junior subtitle">Become A {juniorDeveloperProjects.level}</h2>
+                        <p className="junior timeAndCost">Total Projects | Approximate Time & Cost<span className="value tp"> <i className="fas fa-project-diagram"></i> {juniorProjects} Projects<i className="fas fa-dollar-sign"></i> {juniorCost}<i className="fas fa-dollar-sign"></i> {juniorDeveloperProjects.hourlyRate} Hourly<i className="fas fa-clock"></i>  Approximately {juniorHours} Hour's</span></p>
+                        <p className="junior target">Target Goals During This Time<span className="value"> <i className="fas fa-bullseye"></i> {juniorDeveloperProjects.description}</span></p>
                         <p className="junior salary">Target Compensation for this Skill Level<span className="value"> <i className="fas fa-briefcase"></i> {juniorDeveloperProjects.salary}</span></p>
+                        <p className="junior techStack">Tech Stack<span className="value"> <i className="fab fa-stack-overflow"></i> {juniorDeveloperProjects.techStack.description}</span></p>
                     </aside>
                     <div className="right">
                         <div className="junior projects">
@@ -68,6 +66,11 @@ const JuniorDeveloperCourse: React.FC = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+                <div className="techs">
+                    {juniorDeveloperProjects.techStack.technologies.map((tech,index) => (
+                        <div key={index+1+`-`+tech} id={tech} className="tech">{tech}</div>
+                    ))}
                 </div>
             </div>
         </div>

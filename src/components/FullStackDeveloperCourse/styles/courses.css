@@ -23,7 +23,8 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 1em;
-  margin-bottom: 2em;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .fullStackCourses .inner {
@@ -34,7 +35,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 95%;
   height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -42,6 +43,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+}
+
+.fullStackCourses .inner .techs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  grid-gap: 1em;
+  -webkit-animation: marquee 50s linear infinite alternate;
+          animation: marquee 50s linear infinite alternate;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.fullStackCourses .inner .techs .tech {
+  font-size: 0.85em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto !important;
 }
 
 .fullStackCourses .inner .course {
@@ -96,11 +124,25 @@
   text-align: left;
 }
 
+.fullStackCourses .inner .course .left .timeAndCost .fa-clock {
+  margin-left: 15px !important;
+}
+
+.fullStackCourses .inner .course .left .timeAndCost .fa-dollar-sign {
+  margin-left: 15px !important;
+}
+
 .fullStackCourses .inner .course .left .value i {
   color: var(--fullStack);
+  font-size: 1.03em;
+  margin-right: 0.1em;
 }
 
 .fullStackCourses .inner .course .left .value i:not(.fa-clock) {
+  margin-left: -15px;
+}
+
+.fullStackCourses .inner .course .left .value i:not(.fa-dollar-sign) {
   margin-left: -15px;
 }
 
@@ -111,7 +153,7 @@
 
 .fullStackCourses .inner .course .left :not(h2) {
   padding-left: 1em;
-  font-size: 1.03em;
+  font-size: 0.98em;
 }
 
 .fullStackCourses .inner .course .left p {
@@ -175,6 +217,14 @@
   background: var(--fullStack);
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  position: relative;
+}
+
+.fullStackCourses .inner .course .right .projects .project .index {
+  position: absolute;
+  font-size: 2em;
+  bottom: 1em;
+  right: 1em;
 }
 
 .fullStackCourses .inner .course .right .projects .project:nth-child(2n + 1) {
@@ -271,5 +321,27 @@
 
 .fullStackCourses .inner .course .right .projects .project .technologies .technology {
   font-size: 0.85em;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  100% {
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  100% {
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
 }
 /*# sourceMappingURL=courses.css.map */

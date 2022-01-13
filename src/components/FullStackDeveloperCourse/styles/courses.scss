@@ -14,14 +14,30 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
-  margin-bottom: 2em;
+  transform: scale(0.98);
   .inner {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     height: 100%;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    .techs {
+      display: flex;
+      width: 100%;
+      grid-gap: 1em;
+      animation: marquee 50s linear infinite alternate;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+      .tech {
+        font-size: 0.85em;
+        display: flex;
+        width: auto !important;
+        // min-width: 300px;
+      }
+    }
     .course {
       padding: 1em;
       margin: 1em 0;
@@ -49,10 +65,21 @@
           align-items: flex-start;
           justify-content: flex-start;
           text-align: left;
+          .fa-clock {
+            margin-left: 15px !important;
+          }
+          .fa-dollar-sign {
+            margin-left: 15px !important;
+          }
         }
         .value i {
           color: var(--fullStack);
+          font-size: 1.03em;
+          margin-right: 0.1em;
           &:not(.fa-clock) {
+            margin-left: -15px;
+          }
+          &:not(.fa-dollar-sign) {
             margin-left: -15px;
           }
         }
@@ -62,7 +89,7 @@
         }
         :not(h2) {
           padding-left: 1em;
-          font-size: 1.03em;
+          font-size: 0.98em;
         }
         p {
           display: flex;
@@ -101,6 +128,13 @@
             background: var(--fullStack);
             border-top-right-radius: 5px;
             border-top-left-radius: 5px;
+            position: relative;
+            .index {
+              position: absolute;
+              font-size: 2em;
+              bottom: 1em;
+              right: 1em;
+            }
             &:nth-child(2n + 1) {
               background: var(--silver);
               color: var(--secondary);
@@ -170,5 +204,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translate(-50%);
   }
 }

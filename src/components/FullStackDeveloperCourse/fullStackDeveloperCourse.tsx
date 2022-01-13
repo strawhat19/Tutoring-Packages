@@ -28,11 +28,11 @@ const FullStackDeveloperCourse: React.FC = () => {
             <div className="inner">
                 <div className="fullStack course">
                     <aside className="left">
-                    <h2 className="fullStack subtitle">Become A {fullStackDeveloperProjects.level}</h2>
-                        <p className="fullStack timeAndCost">Time & Cost<span className="value tp"> <i className="fas fa-project-diagram"></i> {fullStackProjects} Projects<i className="fas fa-dollar-sign"></i> {fullStackCost}<i className="fas fa-clock"></i>  Approximately {fullStackHours} Hour's</span></p>
-                        <p className="fullStack rate">Tutoring Rate<span className="value"> <i className="fas fa-code"></i> {fullStackDeveloperProjects.hourlyRate}</span></p>
-                        <p className="fullStack target">Target Goals During This Time<span className="value"> <i className="fas fa-bullseye"></i> {fullStackDeveloperProjects.target}</span></p>
+                        <h2 className="fullStack subtitle">Become A {fullStackDeveloperProjects.level}</h2>
+                        <p className="fullStack timeAndCost">Time & Cost<span className="value tp"> <i className="fas fa-project-diagram"></i> {fullStackProjects} Projects<i className="fas fa-dollar-sign"></i> {fullStackCost}<i className="fas fa-dollar-sign"></i> {fullStackDeveloperProjects.hourlyRate} Hourly<i className="fas fa-clock"></i>  Approximately {fullStackHours} Hour's</span></p>
+                        <p className="fullStack target">Target Goals During This Time<span className="value"> <i className="fas fa-bullseye"></i> {fullStackDeveloperProjects.description}</span></p>
                         <p className="fullStack salary">Target Compensation for this Skill Level<span className="value"> <i className="fas fa-briefcase"></i> {fullStackDeveloperProjects.salary}</span></p>
+                        <p className="fullStack techStack">Tech Stack<span className="value"> <i className="fab fa-stack-overflow"></i> {fullStackDeveloperProjects.techStack.description}</span></p>
                     </aside>
                     <div className="right">
                         <div className="fullStack projects">
@@ -60,6 +60,12 @@ const FullStackDeveloperCourse: React.FC = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+                <div className="techs">
+                    Hello
+                    {fullStackDeveloperProjects.techStack.technologies.map((tech,index) => (
+                        <div key={index+1+`-`+tech} id={tech} className="tech">{tech}</div>
+                    ))}
                 </div>
             </div>
         </div>

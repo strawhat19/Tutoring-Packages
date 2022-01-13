@@ -22,6 +22,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 1em;
+  margin-bottom: 2em;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
 }
@@ -34,7 +35,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 95%;
   height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -42,6 +43,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+}
+
+.courses .inner .techs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  grid-gap: 1em;
+  -webkit-animation: marquee 50s linear infinite alternate;
+          animation: marquee 50s linear infinite alternate;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.courses .inner .techs .tech {
+  font-size: 0.85em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto !important;
 }
 
 .courses .inner .course {
@@ -106,6 +134,8 @@
 
 .courses .inner .course .left .value i {
   color: var(--junior);
+  font-size: 1.03em;
+  margin-right: 0.1em;
 }
 
 .courses .inner .course .left .value i:not(.fa-clock) {
@@ -123,7 +153,7 @@
 
 .courses .inner .course .left :not(h2) {
   padding-left: 1em;
-  font-size: 1.03em;
+  font-size: 0.98em;
 }
 
 .courses .inner .course .left p {
@@ -291,5 +321,27 @@
 
 .courses .inner .course .right .projects .project .technologies .technology {
   font-size: 0.85em;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  100% {
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  100% {
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
 }
 /*# sourceMappingURL=courses.css.map */
