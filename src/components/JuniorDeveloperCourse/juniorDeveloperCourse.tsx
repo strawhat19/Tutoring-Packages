@@ -12,7 +12,7 @@ const JuniorDeveloperCourse: React.FC = () => {
     const [juniorHours, setJuniorHours] = useState<any>(null);
     const [juniorProjects, setJuniorProjects] = useState<any>(null);
 
-    const cartItems = document.querySelector(`.cartItems`);
+    const cartItems:any = document.querySelector(`.cartItems`);
 
     useEffect(() => {
 
@@ -78,14 +78,17 @@ const JuniorDeveloperCourse: React.FC = () => {
 
                                         localStorage.setItem(`Shopping Cart`, JSON.stringify([...new Set(emptyCart)]));
 
-                                        let updatedCart = [... new Set(JSON.parse(localStorage.getItem(`Shopping Cart`)))];
+                                        let unParsedcart:string = localStorage.getItem(`Shopping Cart`) || `[]`;
 
-                                        cartItems.innerHTML = updatedCart.length;
+                                        let updatedCart = [...new Set(JSON.parse(unParsedcart))] || [] as any;
 
-                                        let cart = JSON.parse(localStorage.getItem(`Shopping Cart`));
-                                        
-                                        console.log(cart.length);
-                                        if (cart.length > 0) {
+                                        let cartNum:number = updatedCart.length
+
+                                        cartItems.innerHTML = cartNum;
+
+                                        // let cart = JSON.parse(localStorage.getItem(`Shopping Cart`)) || [] as any;
+                                    
+                                        if (updatedCart.length > 0) {
                                         document.querySelector(`#cartItems`)?.classList.remove(`hide`);
                                         document.querySelector(`#cartItems`)?.classList.add(`show`);
                                         } else {
@@ -93,7 +96,7 @@ const JuniorDeveloperCourse: React.FC = () => {
                                         document.querySelector(`#cartItems`)?.classList.remove(`show`);
                                         }
 
-                                        console.log(JSON.parse(localStorage.getItem(`Shopping Cart`)));
+                                        console.log(updatedCart);
 
                                     }} id={index} className="cart cartButton">+</button>
                                         {index+1}
