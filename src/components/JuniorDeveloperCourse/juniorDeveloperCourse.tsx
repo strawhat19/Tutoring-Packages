@@ -60,7 +60,7 @@ const JuniorDeveloperCourse: React.FC = () => {
                                         <span className="desc">{project.description}</span>
                                         <img src={project.picture} alt="Project Example Picture" className="projectPic" />
                                         <p className="technologies">
-                                            {project.technologies.map((tech,index) => (
+                                            {project.technologies.map((tech:any,index:any) => (
                                                 <span key={index+1+`-`+tech} id={tech} className="technology"> - {tech}</span>
                                             ))}
                                         </p>
