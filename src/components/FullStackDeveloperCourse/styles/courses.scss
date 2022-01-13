@@ -28,14 +28,14 @@
       width: 100%;
       grid-gap: 1em;
       animation: marquee 50s linear infinite alternate;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       transition: var(--transition);
       .tech {
         font-size: 0.85em;
         display: flex;
         width: auto !important;
-        // min-width: 300px;
+        min-width: 150px;
       }
     }
     .course {

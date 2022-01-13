@@ -1,14 +1,17 @@
 import React, {useState, useEffect} from "react";
-import sortObjByKeyLength from "./sortObjByKeyLength";
 import calcHoursAndCost from "./calcHoursAndCost";
 import { fullStackDeveloperProjects } from "./fullStackDeveloperProjects";
 import './styles/courses.css';
+import cartContext from "../../contexts/cartContext";
+const emptyCart = JSON.parse(localStorage.getItem(`Shopping Cart`)) || [];
 
 const FullStackDeveloperCourse: React.FC = () => {
 
     const [fullStackCost, setFullStackCost] = useState<any>(null);
     const [fullStackHours, setFullStackHours] = useState<any>(null);
     const [fullStackProjects, setFullStackProjects] = useState<any>(null);
+
+    const cartItems = document.querySelector(`.cartItems`);
 
     useEffect(() => {
 
@@ -55,7 +58,16 @@ const FullStackDeveloperCourse: React.FC = () => {
                                             ))}
                                         </p>
                                     </p>
-                                    <div className="index">{index+1}</div>
+                                    <div className="index">
+                                    <button onClick={(event) => {
+                                        emptyCart.push(fullStackDeveloperProjects.projects[event.target.id]);
+                                        localStorage.setItem(`Shopping Cart`, JSON.stringify([...new Set(emptyCart)]));
+                                        let updatedCart = [... new Set(JSON.parse(localStorage.getItem(`Shopping Cart`)))];
+                                        cartItems.innerHTML = updatedCart.length;
+                                        console.log(JSON.parse(localStorage.getItem(`Shopping Cart`)));
+                                    }} id={index} className="cart cartButton">+</button>
+                                        {index+1}
+                                    </div>
                                 </div>
                             ))}
                         </div>

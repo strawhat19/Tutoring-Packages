@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from "react";
-import sortObjByKeyLength from "./sortObjByKeyLength";
 import calcHoursAndCost from "./calcHoursAndCost";
-// import {calcHoursAndCost} from "./calcHoursAndCostCopy";
 import {juniorDeveloperProjects}  from "./juniorDeveloperProjects";
 import './styles/courses.css';
+import cartContext from "../../contexts/cartContext";
+const emptyCart = JSON.parse(localStorage.getItem(`Shopping Cart`)) || [];
 
 const JuniorDeveloperCourse: React.FC = () => {
 
     const [juniorCost, setJuniorCost] = useState<any>(null);
     const [juniorHours, setJuniorHours] = useState<any>(null);
     const [juniorProjects, setJuniorProjects] = useState<any>(null);
+
+    const cartItems = document.querySelector(`.cartItems`);
 
     useEffect(() => {
 
@@ -31,6 +33,7 @@ const JuniorDeveloperCourse: React.FC = () => {
         // Add Course Form
         <div className="courses">
             <h1 className="title">Tutoring Packages</h1>
+            <h1 className="title">Practical Programming</h1>
             <div className="inner">
                 <div className="junior course">
                     <aside className="left">
@@ -61,7 +64,16 @@ const JuniorDeveloperCourse: React.FC = () => {
                                             ))}
                                         </p>
                                     </p>
-                                    <div className="index">{index+1}</div>
+                                    <div className="index">
+                                    <button onClick={(event) => {
+                                        emptyCart.push(juniorDeveloperProjects.projects[event.target.id]);
+                                        localStorage.setItem(`Shopping Cart`, JSON.stringify([...new Set(emptyCart)]));
+                                        let updatedCart = [... new Set(JSON.parse(localStorage.getItem(`Shopping Cart`)))];
+                                        cartItems.innerHTML = updatedCart.length;
+                                        console.log(JSON.parse(localStorage.getItem(`Shopping Cart`)));
+                                    }} id={index} className="cart cartButton">+</button>
+                                        {index+1}
+                                    </div>
                                 </div>
                             ))}
                         </div>

@@ -1,6 +1,15 @@
-import React from "react";
+import React, {useContext, useEffect} from "react";
 import './styles/header.css';
+import cartContext from "../../contexts/cartContext";
+
 const Header: React.FC = () => {
+    const cart = useContext(cartContext) || [];
+    
+    useEffect(() => {
+        let cartItems = document.querySelector(`.cartItems`);
+        cartItems.innerHTML = cart.length;
+    }, [])
+    
     return (
         <header>
             <div className="inner">
@@ -15,7 +24,9 @@ const Header: React.FC = () => {
                 <div className="profileSettings navigation">
                    <ul>
                        <li><i className="fas fa-search"></i></li>
-                       <li><i className="fas fa-shopping-cart"></i></li>
+                       <li><i className="cart fas fa-shopping-cart">
+                            <span className="cartItems">{cart.length}</span>
+                        </i></li>
                        <li><i className="fas fa-bell"></i></li>
                        <li>Welcome, User</li>
                    </ul>

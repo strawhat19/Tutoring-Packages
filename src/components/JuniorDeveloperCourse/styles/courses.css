@@ -54,9 +54,9 @@
   grid-gap: 1em;
   -webkit-animation: marquee 50s linear infinite alternate;
           animation: marquee 50s linear infinite alternate;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -70,6 +70,7 @@
   display: -ms-flexbox;
   display: flex;
   width: auto !important;
+  min-width: 150px;
 }
 
 .courses .inner .course {
@@ -225,6 +226,42 @@
   font-size: 2em;
   bottom: 1em;
   right: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.courses .inner .course .right .projects .project .index .cartButton {
+  background: black;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 .courses .inner .course .right .projects .project:nth-child(2n + 1) {
