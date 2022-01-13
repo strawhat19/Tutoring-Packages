@@ -1,9 +1,9 @@
 import React from 'react';
-import Courses from './components/Courses/courses';
 import Footer from './components/Footer/footer';
-
+import JuniorDeveloperCourse from './components/JuniorDeveloperCourse/juniorDeveloperCourse'
 import Header from './components/Header/header';
 import './sass/App.css';
+import FullStackDeveloperCourse from './components/FullStackDeveloperCourse/fullStackDeveloperCourse';
 // import $ from 'jquery';
 
 export default class App extends React.Component {
@@ -11,7 +11,8 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Courses />
+        <JuniorDeveloperCourse />
+        <FullStackDeveloperCourse />
        <Footer />
       </div>
     );  

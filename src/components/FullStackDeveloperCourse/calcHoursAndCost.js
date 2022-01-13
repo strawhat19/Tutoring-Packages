@@ -22,9 +22,6 @@ const calcHoursAndCost = (projects, level) => {
     localStorage.setItem(`${level} Hours`, hours);
     localStorage.setItem(`${level} Cost`, cost);
   });
-
-  console.log(`${level} Hours`, localStorage.getItem(`${level} Hours`));
-  console.log(`${level} Cost`, localStorage.getItem(`${level} Cost`));
 };
 
 export default calcHoursAndCost;

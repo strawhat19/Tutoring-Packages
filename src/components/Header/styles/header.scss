@@ -14,6 +14,14 @@ header {
     width: 90%;
     .navigation {
       display: flex;
+      .logo {
+        color: var(--main);
+        font-size: 2.5em;
+        transition: var(--transition);
+        &:hover {
+          color: white;
+        }
+      }
       ul {
         margin: 0;
         padding: 0;

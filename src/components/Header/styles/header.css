@@ -35,6 +35,17 @@ header .inner .navigation {
   display: flex;
 }
 
+header .inner .navigation .logo {
+  color: var(--main);
+  font-size: 2.5em;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .inner .navigation .logo:hover {
+  color: white;
+}
+
 header .inner .navigation ul {
   margin: 0;
   padding: 0;

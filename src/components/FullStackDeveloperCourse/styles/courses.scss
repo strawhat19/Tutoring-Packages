@@ -1,0 +1,174 @@
+:root {
+  --courseHeight: 625px;
+  --fullStackHeight: 755px;
+}
+
+.fullStackCourses {
+  background: black;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin-bottom: 2em;
+  .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    .course {
+      padding: 1em;
+      margin: 1em 0;
+      border-bottom: 10px solid var(--fullStack);
+      border-top: 10px solid var(--fullStack);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      grid-gap: 2em;
+      align-items: stretch;
+      min-height: var(--fullStackHeight);
+      transition: var(--transition);
+      .left {
+        width: 40%;
+        height: 100%;
+        min-height: var(--fullStackHeight);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0.1em;
+        .timeAndCost {
+          display: flex;
+          width: 100%;
+          align-items: flex-start;
+          justify-content: flex-start;
+          text-align: left;
+        }
+        .value i {
+          color: var(--fullStack);
+          &:not(.fa-clock) {
+            margin-left: -15px;
+          }
+        }
+        h2 {
+          padding-bottom: 0.5em;
+          border-bottom: 5px solid var(--fullStack);
+        }
+        :not(h2) {
+          padding-left: 1em;
+          font-size: 1.03em;
+        }
+        p {
+          display: flex;
+          flex-direction: column;
+          span {
+            width: 100%;
+            padding-top: 1em;
+            margin-top: 1em;
+            border-top: 5px solid var(--fullStack);
+          }
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
+        min-height: var(--fullStackHeight);
+        transition: var(--transition);
+        .projects {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          grid-gap: 1em;
+          .project {
+            width: 100%;
+            height: 100%;
+            min-width: 400px;
+            min-height: var(--fullStackHeight);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            background: var(--fullStack);
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            &:nth-child(2n + 1) {
+              background: var(--silver);
+              color: var(--secondary);
+            }
+            .pTitleRow {
+              display: flex;
+              width: 95%;
+              margin: 0 auto;
+              justify-content: space-between;
+              align-items: center;
+              grid-gap: 1em;
+              .projectData {
+                font-weight: 500;
+                p {
+                  display: flex;
+                  width: 100%;
+                  align-items: center;
+                  justify-content: flex-end;
+                  grid-gap: 0.3em;
+                }
+              }
+            }
+            h3 {
+              font-size: 1.1em;
+              width: 54%;
+              text-align: left;
+            }
+            p {
+              margin: 0.5em;
+            }
+            a {
+              color: white;
+              font-size: 1.5em;
+              transition: var(--transition);
+              &:hover {
+                color: white;
+                i {
+                  color: white;
+                }
+              }
+            }
+            i {
+              color: black;
+              transition: var(--transition);
+            }
+            .projectDescription {
+              padding-left: 1em;
+              font-weight: 500 !important;
+              .projectPic {
+                margin-top: 1em;
+                width: 100%;
+              }
+            }
+            .technologies {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              grid-gap: 1em;
+              padding-top: 1em;
+              padding-right: 1em;
+              font-style: italic;
+              .technology {
+                font-size: 0.85em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

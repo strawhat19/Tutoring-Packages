@@ -1,4 +1,9 @@
-.courses {
+:root {
+  --courseHeight: 625px;
+  --fullStackHeight: 755px;
+}
+
+.fullStackCourses {
   background: black;
   color: white;
   text-align: left;
@@ -18,9 +23,10 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 1em;
+  margin-bottom: 2em;
 }
 
-.courses .inner {
+.fullStackCourses .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,8 +44,11 @@
           align-items: center;
 }
 
-.courses .inner .course {
+.fullStackCourses .inner .course {
   padding: 1em;
+  margin: 1em 0;
+  border-bottom: 10px solid var(--fullStack);
+  border-top: 10px solid var(--fullStack);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,15 +57,21 @@
           justify-content: space-between;
   width: 100%;
   height: 100%;
-  grid-gap: 1em;
+  grid-gap: 2em;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  min-height: var(--fullStackHeight);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
-.courses .inner .course .left {
+.fullStackCourses .inner .course .left {
   width: 40%;
   height: 100%;
+  min-height: var(--fullStackHeight);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,11 +82,39 @@
   grid-gap: 0.1em;
 }
 
-.courses .inner .course .left :not(h2) {
-  padding-left: 1em;
+.fullStackCourses .inner .course .left .timeAndCost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: left;
 }
 
-.courses .inner .course .left p {
+.fullStackCourses .inner .course .left .value i {
+  color: var(--fullStack);
+}
+
+.fullStackCourses .inner .course .left .value i:not(.fa-clock) {
+  margin-left: -15px;
+}
+
+.fullStackCourses .inner .course .left h2 {
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid var(--fullStack);
+}
+
+.fullStackCourses .inner .course .left :not(h2) {
+  padding-left: 1em;
+  font-size: 1.03em;
+}
+
+.fullStackCourses .inner .course .left p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,12 +124,14 @@
           flex-direction: column;
 }
 
-.courses .inner .course .left p span {
+.fullStackCourses .inner .course .left p span {
   width: 100%;
   padding-top: 1em;
+  margin-top: 1em;
+  border-top: 5px solid var(--fullStack);
 }
 
-.courses .inner .course .right {
+.fullStackCourses .inner .course .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,9 +141,12 @@
           flex-direction: column;
   width: 60%;
   height: 100%;
+  min-height: var(--fullStackHeight);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
-.courses .inner .course .right .projects {
+.fullStackCourses .inner .course .right .projects {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -109,11 +157,13 @@
   grid-gap: 1em;
 }
 
-.courses .inner .course .right .projects .project {
+.fullStackCourses .inner .course .right .projects .project {
   width: 100%;
   height: 100%;
   min-width: 400px;
-  min-height: 400px;
+  min-height: var(--fullStackHeight);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,12 +172,17 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1em;
-  background: var(--main);
+  background: var(--fullStack);
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
-.courses .inner .course .right .projects .project .pTitleRow {
+.fullStackCourses .inner .course .right .projects .project:nth-child(2n + 1) {
+  background: var(--silver);
+  color: var(--secondary);
+}
+
+.fullStackCourses .inner .course .right .projects .project .pTitleRow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,11 +197,11 @@
   grid-gap: 1em;
 }
 
-.courses .inner .course .right .projects .project .pTitleRow .projectData {
+.fullStackCourses .inner .course .right .projects .project .pTitleRow .projectData {
   font-weight: 500;
 }
 
-.courses .inner .course .right .projects .project .pTitleRow .projectData p {
+.fullStackCourses .inner .course .right .projects .project .pTitleRow .projectData p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,39 +215,61 @@
   grid-gap: 0.3em;
 }
 
-.courses .inner .course .right .projects .project h3 {
+.fullStackCourses .inner .course .right .projects .project h3 {
   font-size: 1.1em;
   width: 54%;
   text-align: left;
 }
 
-.courses .inner .course .right .projects .project p {
+.fullStackCourses .inner .course .right .projects .project p {
   margin: 0.5em;
 }
 
-.courses .inner .course .right .projects .project a {
+.fullStackCourses .inner .course .right .projects .project a {
   color: white;
   font-size: 1.5em;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.courses .inner .course .right .projects .project a:hover {
+.fullStackCourses .inner .course .right .projects .project a:hover {
   color: white;
 }
 
-.courses .inner .course .right .projects .project a:hover i {
+.fullStackCourses .inner .course .right .projects .project a:hover i {
   color: white;
 }
 
-.courses .inner .course .right .projects .project i {
+.fullStackCourses .inner .course .right .projects .project i {
   color: black;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.courses .inner .course .right .projects .project .projectDescription {
+.fullStackCourses .inner .course .right .projects .project .projectDescription {
   padding-left: 1em;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
+}
+
+.fullStackCourses .inner .course .right .projects .project .projectDescription .projectPic {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.fullStackCourses .inner .course .right .projects .project .technologies {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-gap: 1em;
+  padding-top: 1em;
+  padding-right: 1em;
+  font-style: italic;
+}
+
+.fullStackCourses .inner .course .right .projects .project .technologies .technology {
+  font-size: 0.85em;
 }
 /*# sourceMappingURL=courses.css.map */

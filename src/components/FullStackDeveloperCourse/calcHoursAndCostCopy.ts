@@ -15,6 +15,8 @@ interface Course {
         approximateHours: number;
         approximateCost: number;
         description: string;
+        picture: string;
+        demo: string;
         technologies: string[];
     }[]; 
   }
@@ -32,6 +34,8 @@ interface Course {
     approximateHours: number;
     approximateCost: number;
     description: string;
+    picture: string;
+    demo: string;
     technologies: string[];
   };
   
@@ -61,13 +65,4 @@ interface Course {
           localStorage.setItem(`${level} Hours`, hoursArray);
           localStorage.setItem(`${level} Cost`, costArray);
       });
-  
-      console.log(
-      `${level} Hours`,
-      localStorage.getItem(`${level} Hours`)
-      );
-      console.log(
-      `${level} Cost`,
-      localStorage.getItem(`${level} Cost`)
-      );
   };

@@ -1,3 +1,7 @@
+:root {
+  --courseHeight: 625px;
+}
+
 .courses {
   background: black;
   color: white;
@@ -9,6 +13,7 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
+  transform: scale(0.98);
   .inner {
     display: flex;
     flex-direction: column;
@@ -18,20 +23,54 @@
     align-items: center;
     .course {
       padding: 1em;
+      margin: 1em 0;
+      border-bottom: 10px solid var(--junior);
+      border-top: 10px solid var(--junior);
       display: flex;
       justify-content: space-between;
       width: 100%;
       height: 100%;
-      grid-gap: 1em;
+      grid-gap: 2em;
       align-items: stretch;
+      min-height: var(--courseHeight);
+      transition: var(--transition);
       .left {
         width: 40%;
         height: 100%;
+        min-height: var(--courseHeight);
+        transition: var(--transition);
         display: flex;
         flex-direction: column;
         grid-gap: 0.1em;
+        .timeAndCost {
+          display: flex;
+          width: 100%;
+          align-items: flex-start;
+          justify-content: flex-start;
+          text-align: left;
+          .fa-clock {
+            margin-left: 15px !important;
+          }
+          .fa-dollar-sign {
+            margin-left: 15px !important;
+          }
+        }
+        .value i {
+          color: var(--junior);
+          &:not(.fa-clock) {
+            margin-left: -15px;
+          }
+          &:not(.fa-dollar-sign) {
+            margin-left: -15px;
+          }
+        }
+        h2 {
+          padding-bottom: 0.5em;
+          border-bottom: 5px solid var(--junior);
+        }
         :not(h2) {
           padding-left: 1em;
+          font-size: 1.03em;
         }
         p {
           display: flex;
@@ -39,6 +78,8 @@
           span {
             width: 100%;
             padding-top: 1em;
+            margin-top: 1em;
+            border-top: 5px solid var(--junior);
           }
         }
       }
@@ -47,6 +88,8 @@
         flex-direction: column;
         width: 60%;
         height: 100%;
+        min-height: var(--courseHeight);
+        transition: var(--transition);
         .projects {
           width: 100%;
           height: 100%;
@@ -58,13 +101,25 @@
             width: 100%;
             height: 100%;
             min-width: 400px;
-            min-height: 400px;
+            min-height: var(--courseHeight);
+            transition: var(--transition);
             display: flex;
             flex-direction: column;
             padding: 1em;
-            background: var(--main);
+            background: var(--junior);
             border-top-right-radius: 5px;
             border-top-left-radius: 5px;
+            position: relative;
+            .index {
+              position: absolute;
+              font-size: 2em;
+              bottom: 1em;
+              right: 1em;
+            }
+            &:nth-child(2n + 1) {
+              background: var(--silver);
+              color: var(--secondary);
+            }
             .pTitleRow {
               display: flex;
               width: 95%;
@@ -108,7 +163,23 @@
             }
             .projectDescription {
               padding-left: 1em;
-              font-weight: 400 !important;
+              font-weight: 500 !important;
+              .projectPic {
+                margin-top: 1em;
+                width: 100%;
+              }
+            }
+            .technologies {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              grid-gap: 1em;
+              padding-top: 1em;
+              padding-right: 1em;
+              font-style: italic;
+              .technology {
+                font-size: 0.85em;
+              }
             }
           }
         }

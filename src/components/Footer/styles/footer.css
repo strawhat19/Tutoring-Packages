@@ -3,9 +3,9 @@
 }
 
 footer {
-  background: var(--main);
+  background: var(--secondary);
   color: white;
-  font-family: 'Montserrat' !important;
+  font-family: "Montserrat" !important;
   height: 40px;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -44,12 +44,13 @@ footer .innerFooter {
 
 footer a {
   color: white !important;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-decoration: none;
   font-weight: 400 !important;
 }
 
-footer i, .vertical-sep {
+footer i,
+.vertical-sep {
   color: #fff;
 }
 /*# sourceMappingURL=footer.css.map */

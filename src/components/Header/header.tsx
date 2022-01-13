@@ -6,9 +6,9 @@ const Header: React.FC = () => {
             <div className="inner">
                 <div className="navigation">
                     <a title="Home" className="homeLink" href="./">
-                        <img className="logo" src="https://raw.githubusercontent.com/strawhat19/react-netflix-clone/main/public/assets/netflixLogo.png" alt="Logo" />
+                        <i className="logo fas fa-code" title="Logo" ></i>
                     </a>
-                    <ul><li className="navigation-tab"><a className="current active" href="/browse">Home</a></li><li className="navigation-tab"><a href="/browse/genre/83">TV Shows</a></li><li className="navigation-tab"><a href="/browse/genre/34399">Movies</a></li><li className="navigation-tab"><a href="/latest">New &amp; Popular</a></li><li className="navigation-tab"><a href="/browse/my-list">My List</a></li></ul>
+                    <ul><li className="navigation-tab"><a href="/browse/classes">Classes</a></li><li className="navigation-tab"><a href="/browse/students">Students</a></li><li className="navigation-tab"><a href="/latest">New &amp; Popular</a></li><li className="navigation-tab"><a href="/browse/my-list">My List</a></li></ul>
                 </div>
                 <div className="profileSettings navigation">
                    <ul>
