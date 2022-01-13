@@ -62,9 +62,11 @@ const FullStackDeveloperCourse: React.FC = () => {
                                     <div className="index">
                                     <button onClick={(event) => {
 
-                                        let idx:number = event.target.id;
+                                        let target:{} = event.target;
 
-                                        let project:any = fullStackDeveloperProjects.projects[idx];
+                                        let idx:number = target.id;
+
+                                        let project:{} = fullStackDeveloperProjects.projects[idx];
 
                                         console.log(project);
 
