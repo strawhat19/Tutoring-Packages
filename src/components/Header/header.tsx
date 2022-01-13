@@ -6,10 +6,10 @@ const Header: React.FC = () => {
     const cart = useContext(cartContext) || [];
     
     useEffect(() => {
-        let cartItems = document.querySelector(`.cartItems`);
-        let cartStore = JSON.parse(localStorage.getItem(`Shopping Cart`));
+        let cartItems:any = document.querySelector(`.cartItems`);
+        let cartStore = JSON.parse(localStorage.getItem(`Shopping Cart`) || `[]`);
         if (cartStore) {
-            cartItems.innerHTML = JSON.parse(localStorage.getItem(`Shopping Cart`)).length;
+            cartItems.innerHTML = JSON.parse(localStorage.getItem(`Shopping Cart`)  || `[]`).length;
         } else {
             cartItems.innerHTML = 0;
         }
