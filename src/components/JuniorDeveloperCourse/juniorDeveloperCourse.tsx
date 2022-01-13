@@ -9,17 +9,17 @@ let emptyCart = JSON.parse(unParsedcart) || [] as any;
 
 declare global {
     namespace JSX {
-      interface IntrinsicElements {
+        interface IntrinsicElements {
         'person-info': PersonInfoProps
-      }
+        }
     }
-  }
-  
-  interface PersonInfoProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+}
+
+interface PersonInfoProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
     heading: string,
     subHeading: string,
     size?: string
-  }
+}
 
 const JuniorDeveloperCourse: React.FC = () => {
 

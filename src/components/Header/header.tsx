@@ -5,17 +5,17 @@ import cartContext from "../../contexts/cartContext";
 
 declare global {
     namespace JSX {
-      interface IntrinsicElements {
+        interface IntrinsicElements {
         'person-info': PersonInfoProps
-      }
+        }
     }
-  }
-  
-  interface PersonInfoProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+}
+
+interface PersonInfoProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
     heading: string,
     subHeading: string,
     size?: string
-  }
+}
 
 const Header: React.FC = () => {
     const cart = useContext(cartContext) || [];

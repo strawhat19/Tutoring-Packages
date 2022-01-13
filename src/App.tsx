@@ -10,9 +10,9 @@ import cartContext from './contexts/cartContext';
 
 declare global {
   namespace JSX {
-    interface IntrinsicElements {
+      interface IntrinsicElements {
       'person-info': PersonInfoProps
-    }
+      }
   }
 }
 
