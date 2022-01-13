@@ -61,7 +61,10 @@ const FullStackDeveloperCourse: React.FC = () => {
                                     </p>
                                     <div className="index">
                                     <button onClick={(event) => {
-                                        emptyCart.push(fullStackDeveloperProjects.projects[event.target.id]);
+
+                                        let project:any = fullStackDeveloperProjects.projects[event.target.id];
+
+                                        emptyCart.push(project);
 
                                         localStorage.setItem(`Shopping Cart`, JSON.stringify([...new Set(emptyCart)]));
 
