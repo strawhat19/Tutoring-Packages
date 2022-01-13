@@ -3,7 +3,8 @@ import calcHoursAndCost from "./calcHoursAndCost";
 import {juniorDeveloperProjects}  from "./juniorDeveloperProjects";
 import './styles/courses.css';
 import cartContext from "../../contexts/cartContext";
-const emptyCart = JSON.parse(localStorage.getItem(`Shopping Cart`)) || [];
+let unParsedcart:string = localStorage.getItem(`Shopping Cart`) || `[]`;
+let emptyCart:[] = JSON.parse(unParsedcart);
 
 const JuniorDeveloperCourse: React.FC = () => {
 
