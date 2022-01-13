@@ -61,10 +61,26 @@ const FullStackDeveloperCourse: React.FC = () => {
                                     <div className="index">
                                     <button onClick={(event) => {
                                         emptyCart.push(fullStackDeveloperProjects.projects[event.target.id]);
+
                                         localStorage.setItem(`Shopping Cart`, JSON.stringify([...new Set(emptyCart)]));
+
                                         let updatedCart = [... new Set(JSON.parse(localStorage.getItem(`Shopping Cart`)))];
+
                                         cartItems.innerHTML = updatedCart.length;
+
+                                        let cart = JSON.parse(localStorage.getItem(`Shopping Cart`));
+                                        
+                                        console.log(cart.length);
+                                        if (cart.length > 0) {
+                                        document.querySelector(`#cartItems`)?.classList.remove(`hide`);
+                                        document.querySelector(`#cartItems`)?.classList.add(`show`);
+                                        } else {
+                                        document.querySelector(`#cartItems`)?.classList.add(`hide`);
+                                        document.querySelector(`#cartItems`)?.classList.remove(`show`);
+                                        }
+
                                         console.log(JSON.parse(localStorage.getItem(`Shopping Cart`)));
+
                                     }} id={index} className="cart cartButton">+</button>
                                         {index+1}
                                     </div>

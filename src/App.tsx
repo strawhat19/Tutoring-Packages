@@ -7,7 +7,8 @@ import FullStackDeveloperCourse from './components/FullStackDeveloperCourse/full
 import cartContext from './contexts/cartContext';
 // import $ from 'jquery';
 
-const cartData = cartContext || [];
+const cartData:any = cartContext || [];
+const cartItems = document.querySelector(`#cartItems`);
 
 export default class App extends React.Component {
 
@@ -17,15 +18,13 @@ export default class App extends React.Component {
   }
 
   async componentDidMount() {
-    const cartItems = document.querySelector(`.cartItems`);
-    if (this.state.cart) {
-      if (this.state.cart.length > 0) {
-        cartItems.innerHTML = this.state.cart.length;
-      } else {
-        cartItems.display = `none`;
-      }
+    let cart = JSON.parse(localStorage.getItem(`Shopping Cart`));
+    if (!cart) {
+      document.querySelector(`#cartItems`)?.classList.add(`hide`);
+      document.querySelector(`#cartItems`)?.classList.remove(`show`);
     } else {
-      cartItems.display = `none`;
+      document.querySelector(`#cartItems`)?.classList.remove(`hide`);
+      document.querySelector(`#cartItems`)?.classList.add(`show`);
     }
   }
 

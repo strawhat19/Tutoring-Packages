@@ -7,7 +7,12 @@ const Header: React.FC = () => {
     
     useEffect(() => {
         let cartItems = document.querySelector(`.cartItems`);
-        cartItems.innerHTML = cart.length;
+        let cartStore = JSON.parse(localStorage.getItem(`Shopping Cart`));
+        if (cartStore) {
+            cartItems.innerHTML = JSON.parse(localStorage.getItem(`Shopping Cart`)).length;
+        } else {
+            cartItems.innerHTML = 0;
+        }
     }, [])
     
     return (
@@ -25,7 +30,7 @@ const Header: React.FC = () => {
                    <ul>
                        <li><i className="fas fa-search"></i></li>
                        <li><i className="cart fas fa-shopping-cart">
-                            <span className="cartItems">{cart.length}</span>
+                            <span className="cartItems" id="cartItems">{cart.length}</span>
                         </i></li>
                        <li><i className="fas fa-bell"></i></li>
                        <li>Welcome, User</li>

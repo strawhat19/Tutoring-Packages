@@ -18,6 +18,16 @@
           box-sizing: border-box;
 }
 
+.show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+
 iframe {
   display: none;
 }
