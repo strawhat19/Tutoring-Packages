@@ -18,7 +18,8 @@ export default class App extends React.Component {
   }
 
   async componentDidMount() {
-    let cart = JSON.parse(localStorage.getItem(`Shopping Cart`));
+    let unParsedcart:string = localStorage.getItem(`Shopping Cart`);
+    let cart:any = JSON.parse(unParsedcart);
     if (!cart) {
       document.querySelector(`#cartItems`)?.classList.add(`hide`);
       document.querySelector(`#cartItems`)?.classList.remove(`show`);
