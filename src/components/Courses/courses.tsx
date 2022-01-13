@@ -79,7 +79,7 @@ const Courses: React.FC = () => {
                 <div className="fullStack course">
                     <h2 className="subtitle">{fullStackDeveloperProjects.level}</h2>
                     <div className="fullStackHours">Full Stack Developer Hours - {fullStackHours} HR's</div>
-                    <div className="fullStackCost">Full Stack Developer Cost - ${fullStackCost}</div>
+                    <div className="fullStackCost">Full Stack Developer Cost Hello - ${fullStackCost}</div>
                 </div>
           
             </div>
