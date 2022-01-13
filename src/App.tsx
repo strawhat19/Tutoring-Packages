@@ -7,12 +7,10 @@ import FullStackDeveloperCourse from './components/FullStackDeveloperCourse/full
 import cartContext from './contexts/cartContext';
 // import $ from 'jquery';
 
-const cartData:[] = JSON.parse(localStorage.getItem(`Shopping Cart`)) || [];
-
 export default class App extends React.Component {
 
   state = {
-    cart: cartData,
+    cart: JSON.parse(localStorage.getItem(`Shopping Cart`)) || [],
     user: {}
   }
 
