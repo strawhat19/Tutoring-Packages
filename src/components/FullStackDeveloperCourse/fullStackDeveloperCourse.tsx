@@ -1,10 +1,25 @@
-import React, {useState, useEffect} from "react";
+import * as React from 'react';
+import{useState, useEffect, useContext} from "react";
 import calcHoursAndCost from "./calcHoursAndCost";
 import { fullStackDeveloperProjects } from "./fullStackDeveloperProjects";
 import './styles/courses.css';
 import cartContext from "../../contexts/cartContext";
 let unParsedcart:string = localStorage.getItem(`Shopping Cart`) || `[]`;
 let emptyCart = JSON.parse(unParsedcart) || [] as any;
+
+declare global {
+    namespace JSX {
+      interface IntrinsicElements {
+        'person-info': PersonInfoProps
+      }
+    }
+  }
+  
+  interface PersonInfoProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+    heading: string,
+    subHeading: string,
+    size?: string
+  }
 
 const FullStackDeveloperCourse: React.FC = () => {
 

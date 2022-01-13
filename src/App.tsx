@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import * as React from 'react';
+import{useState, useEffect, useContext} from "react";
 import Footer from './components/Footer/footer';
 import JuniorDeveloperCourse from './components/JuniorDeveloperCourse/juniorDeveloperCourse'
 import Header from './components/Header/header';
@@ -6,6 +7,20 @@ import './sass/App.css';
 import FullStackDeveloperCourse from './components/FullStackDeveloperCourse/fullStackDeveloperCourse';
 import cartContext from './contexts/cartContext';
 // import $ from 'jquery';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'person-info': PersonInfoProps
+    }
+  }
+}
+
+interface PersonInfoProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+  heading: string,
+  subHeading: string,
+  size?: string
+}
 
 const cartData:any = cartContext || [];
 const cartItems = document.querySelector(`#cartItems`);
