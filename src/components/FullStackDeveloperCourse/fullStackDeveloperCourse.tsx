@@ -10,7 +10,9 @@ let emptyCart = JSON.parse(unParsedcart) || [] as any;
 declare global {
     namespace JSX {
         interface IntrinsicElements {
-        'person-info': PersonInfoProps
+            'person-info': PersonInfoProps,
+            'p': any,
+            'span': any
         }
     }
 }

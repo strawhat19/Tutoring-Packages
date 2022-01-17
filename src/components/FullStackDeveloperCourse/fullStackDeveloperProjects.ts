@@ -72,7 +72,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 1,
         approximateCost: 1 * 35,
         description: `Intro to React Game Development & State Management`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://camo.githubusercontent.com/79bf2e1e37edb2aae2010927a60f900128282650983637d8acf4a2bfac091602/687474703a2f2f692e67697068792e636f6d2f6c30457863417a3442757563416a7837792e676966`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `React`,
@@ -90,7 +90,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 2,
         approximateCost: 2 * 35,
         description: `Refresher on Front End Development`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://raw.githubusercontent.com/app-generator/static/master/admin-dashboards/react-dashboard-material-admin-flatlogic-intro.gif`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `HTML`,
@@ -104,11 +104,11 @@ export const fullStackDeveloperProjects = {
         ],
       },
       {
-        title: `README and Profile Generator`,
+        title: `README and Team Profile Generator`,
         approximateHours: 3,
         approximateCost: 3 * 35,
         description: `Intro to Node CLI Apps`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://github.com/strawhat19/Team-Profile-Generator/raw/main/images/step9.gif`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [`Node.js`, `NPM`, `CLI`, `JavaScript`, `TDD`, `Jest`],
       },
@@ -117,13 +117,14 @@ export const fullStackDeveloperProjects = {
         approximateHours: 3,
         approximateCost: 3 * 35,
         description: `Intro to RESTFUL API Development`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://github.com/strawhat19/NoteTaker/raw/main/public/assets/images/noteTakerFinal.jpg`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `HTML`,
           `CSS`,
           `SASS`,
           `PHP`,
+          `Express`,
           `JavaScript`,
           `jQuery`,
           `TypeScript`,
@@ -139,7 +140,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 3.5,
         approximateCost: 3.5 * 35,
         description: `A Spotify Playlist Generator, and a Good Intro to MVC Architecture, SQL, Express & Handlebars`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://github.com/d4nnyq88/tune-time/raw/main/public/images/dashboardOfficial.jpg`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `HTML`,
@@ -171,7 +172,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 4.5,
         approximateCost: 4.5 * 35,
         description: `Stocks Investment App, Intro to MongoDB, Express, React, React Hooks, Context API, Node, MERN Stack`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://raw.githubusercontent.com/strawhat19/Whats-Your-Deal/main/client/public/assets/screenshot2.JPG`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `HTML`,
@@ -205,7 +206,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 5,
         approximateCost: 5 * 35,
         description: `Deep Dive into React, Redux, Firebase & TSX`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://github.com/strawhat19/react-netflix-clone/raw/main/public/assets/design5.jpg`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `HTML`,
@@ -240,7 +241,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 5.5,
         approximateCost: 5.5 * 35,
         description: `Deep Dive into WordPress Theme Development, Plugin Development & Advanced Custom Fields`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://raw.githubusercontent.com/strawhat19/Tutoring-Packages/main/assets/images/PPN.jpg`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `WordPress`,
@@ -260,7 +261,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 7.5,
         approximateCost: 7.5 * 35,
         description: `A Pokedex Clone with Advanced Full Stack Development, React, Redux, Firebase & TSX`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://github.com/strawhat19/MyDex-Pokedex-Clone/raw/main/assets/images/design2.JPG`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `HTML`,
@@ -295,7 +296,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 10,
         approximateCost: 10 * 35,
         description: `Advanced Game Development with Unity, we make an entire game`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/graphics/Sanctuary-Art.png`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `Unity`,
@@ -314,7 +315,7 @@ export const fullStackDeveloperProjects = {
         approximateHours: 5,
         approximateCost: 5 * 35,
         description: `Advanced Modern JS Framework Development and you can see how fast you code`,
-        picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
+        picture: `https://raw.githubusercontent.com/strawhat19/React-Portfolio/main/public/assets/develeporMode2.JPG`,
         demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
         technologies: [
           `HTML`,
