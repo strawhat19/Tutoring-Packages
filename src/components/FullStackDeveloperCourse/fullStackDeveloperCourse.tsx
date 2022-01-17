@@ -11,8 +11,8 @@ declare global {
     namespace JSX {
         interface IntrinsicElements {
             'person-info': PersonInfoProps,
-            'p': any,
-            'span': any
+            // 'p': any,
+            // 'span': any
         }
     }
 }
