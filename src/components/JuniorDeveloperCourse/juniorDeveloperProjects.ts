@@ -1,6 +1,6 @@
 export const juniorDeveloperProjects = {
   level: `Junior Developer`,
-  hourlyRate: 21.25,
+  hourlyRate: 25,
   approximateHours: 40,
   description: `I record every lesson for you to keep forever, and You can quit whenever. By the end of the last project you will be able to apply to Junior Developer, WordPress Developer Positions or Start Light FreeLancing or Tutoring Younger Developers.`,
   salary: `MINIMUM $30,000 - $60,000 or MINIMUM $10 - $20 an hour.`,
@@ -116,9 +116,17 @@ export const juniorDeveloperProjects = {
 
   projects: [
     {
+      title: `Developer Enviornment`,
+      approximateHours: 1,
+      approximateCost: 1 * 25,
+      description: `We start the course by introducing ourselves to eachother and then getting the workspace set up and organized for how we will work across the courses and projects.`,
+      picture: `https://github.com/strawhat19/Tutoring-Packages/blob/main/public/assets/images/development-environments.JPG?raw=true`,
+      demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
+      technologies: [`CodePen`, `VS Code`, `Git Bash`, `SSH`, `Apache`, `XAMPP`, `SASS Compiler`, `Live Server`, `htdocs`, `CLI`, `mkdir`, `touch`, `cd`, `rm rf`, `Adobe Creative Cloud`, `Github`, `Github Pages`, `Heroku`, `Firebase`],
+    },{
       title: `Counter Demo`,
       approximateHours: 0.5,
-      approximateCost: 0.5 * 21.25,
+      approximateCost: 0.5 * 25,
       description: `Light Intro to the course, HTML, CSS, and JavaScript in Codepen`,
       picture: `https://reactjsexample.com/content/images/2019/01/Counter-react-component-with-animation.gif`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -127,7 +135,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Email Signature in Gmail`,
       approximateHours: 1,
-      approximateCost: 1 * 21.25,
+      approximateCost: 1 * 25,
       description: `Make a Simple Email Signature in VS Code`,
       picture: `https://github.com/strawhat19/Tutoring-Packages/blob/main/public/assets/images/emailSignatures.JPG?raw=true`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -136,7 +144,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Rock, Paper, Scissors`,
       approximateHours: 1.5,
-      approximateCost: 1.5 * 21.25,
+      approximateCost: 1.5 * 25,
       description: `Intro to Game Development, Github, and Fusion of HTML, CSS, PHP, SASS, JavaScript & Project Management`,
       picture: `https://raw.githubusercontent.com/strawhat19/Rock-Paper-Scisssors/main/assets/images/Rock-Paper-Scissors-Application.png`,
       demo: `https://strawhat19.github.io/Rock-Paper-Scisssors/`,
@@ -157,7 +165,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Discord Bots`,
       approximateHours: 2,
-      approximateCost: 2 * 21.25,
+      approximateCost: 2 * 25,
       description: `Intro to Discord Bot Development, Hosting & Deployment`,
       picture: `https://github.com/strawhat19/Discord-Bots/raw/main/UpLift/assets/screenshotWOTD.JPG`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -166,7 +174,7 @@ export const juniorDeveloperProjects = {
     {
       title: `WordPress Business Website`,
       approximateHours: 2,
-      approximateCost: 2 * 21.25,
+      approximateCost: 2 * 25,
       description: `Intro to WordPress by Building a Business Website & Application`,
       picture: `https://github.com/strawhat19/Tutoring-Packages/blob/main/public/assets/images/wordPressBusiness.JPG?raw=true`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -175,7 +183,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Password Generator`,
       approximateHours: 2,
-      approximateCost: 2 * 21.25,
+      approximateCost: 2 * 25,
       description: `Intro to Functional Programming, Data Types and Data Array & Object Manipulation`,
       picture: `https://github.com/strawhat19/Password-Generator/raw/main/assets/images/screenshot.png`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -194,7 +202,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Google Chrome No Internet Dinosaur Game`,
       approximateHours: 2.5,
-      approximateCost: 2.5 * 21.25,
+      approximateCost: 2.5 * 25,
       description: `Advanced JavaScript Game Development`,
       picture: `https://miro.medium.com/max/1200/1*kUaj2XZF0R75duI7Lskt2w.gif`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -203,7 +211,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Jr. Dev Portfolio`,
       approximateHours: 3,
-      approximateCost: 3 * 21.25,
+      approximateCost: 3 * 25,
       description: `Simple Single Page Application, Which We Will Be Making Updates To Throughout The Course`,
       picture: `https://github.com/strawhat19/Portfolio/blob/main/assets/images/design/landscapeDesign.png?raw=true`,
       demo: `https://strawhat19.github.io/Portfolio/`,
@@ -231,7 +239,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Hangman`,
       approximateHours: 4,
-      approximateCost: 4 * 21.25,
+      approximateCost: 4 * 25,
       description: `A Word Guessing Game With A Timer`,
       picture: `https://github.com/strawhat19/Word-Guessing-Game/raw/main/assets/images/Word-Guess-Application-Image.png`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -249,7 +257,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Who Wants To Be A Millionaire`,
       approximateHours: 5,
-      approximateCost: 5 * 21.25,
+      approximateCost: 5 * 25,
       description: `A Quiz Like Trivia Game with Registration and a Database with Storage`,
       picture: `https://github.com/strawhat19/Coding-Quiz/raw/main/assets/images/Official-Code-Quiz-Application.png`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -267,7 +275,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Weather App`,
       approximateHours: 7,
-      approximateCost: 7 * 21.25,
+      approximateCost: 7 * 25,
       description: `A Fully Function Weather App Which We Will Turn into a Mobile Application as Well`,
       picture: `https://github.com/strawhat19/Weather-App/raw/main/assets/css/images/designs/WeatherAppFinaleRounded.png`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -292,7 +300,7 @@ export const juniorDeveloperProjects = {
     {
       title: `Project Planner`,
       approximateHours: 9,
-      approximateCost: 9 * 21.25,
+      approximateCost: 9 * 25,
       description: `An Intro to Full Stack Development with a Mix of Project Tracker & Day Planner with User Registration & Data Store`,
       picture: `https://github.com/strawhat19/Project-Tracker/raw/main/assets/images/ProjectTrackerApplication-LightMode.png`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,
@@ -322,7 +330,7 @@ export const juniorDeveloperProjects = {
     {
       title: `WordPress Portfolio`,
       approximateHours: 0.5,
-      approximateCost: 0.5 * 21.25,
+      approximateCost: 0.5 * 25,
       description: `SPA Simple WordPress Portfolio and A Chance to Relax, You can see how Fast you Code now!`,
       picture: `https://github.com/strawhat19/Tutoring-Packages/blob/main/public/assets/images/piratechs.JPG?raw=true`,
       demo: `https://strawhat19.github.io/Piratechs-Email-Signatures/`,

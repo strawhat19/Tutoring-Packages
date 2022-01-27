@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     <footer className="footer red">
         <div className={`innerFooter`}>
             <div className="nameText">
-                <a className="customLink" href="https://strawhat19.github.io/Tutoring-Packages/" target="_blank" title="Tutoring Packages"><i className="fab fa-github"></i> | Tutoring Packages</a>
+                <a className="customLink" href="https://strawhat19.github.io/Tutoring-Packages/" target="_blank" rel='noreferrer' title="Tutoring Packages"><i className="fab fa-github"></i> | Tutoring Packages</a>
             </div>
             <div className="siteText copyright">Copyright <i className="fas fa-copyright"></i> {year}</div>
         </div>

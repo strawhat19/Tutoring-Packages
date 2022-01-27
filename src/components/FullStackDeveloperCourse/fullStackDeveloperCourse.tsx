@@ -1,27 +1,10 @@
 import * as React from 'react';
-import{useState, useEffect, useContext} from "react";
+import{useState, useEffect} from "react";
 import calcHoursAndCost from "./calcHoursAndCost";
 import { fullStackDeveloperProjects } from "./fullStackDeveloperProjects";
 import './styles/courses.css';
-import cartContext from "../../contexts/cartContext";
-let unParsedcart:string = localStorage.getItem(`Shopping Cart`) || `[]`;
-let emptyCart = JSON.parse(unParsedcart) || [] as any;
-
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'person-info': PersonInfoProps,
-            // 'p': any,
-            // 'span': any
-        }
-    }
-}
-
-interface PersonInfoProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
-    heading: string,
-    subHeading: string,
-    size?: string
-}
+let unParsedcart:any = localStorage.getItem(`Shopping Cart`);
+let emptyCart = JSON.parse(unParsedcart) || [];
 
 const FullStackDeveloperCourse: React.FC = () => {
 
@@ -69,7 +52,7 @@ const FullStackDeveloperCourse: React.FC = () => {
                                     </div>
                                     <p className="projectDescription">
                                         <span className="desc">{project.description}</span>
-                                        <img src={project.picture} alt="Project Example Picture" className="projectPic" />
+                                        <img src={project.picture} alt={project?.title} className="projectPic" />
                                         <p className="technologies">
                                             {project.technologies.map((tech:any,index:any) => (
                                                 <span key={index+1+`-`+tech} id={tech} className="technology"> - {tech}</span>

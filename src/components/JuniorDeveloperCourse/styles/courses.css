@@ -22,6 +22,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 1em;
+  margin-top: 3em;
   margin-bottom: 2em;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);

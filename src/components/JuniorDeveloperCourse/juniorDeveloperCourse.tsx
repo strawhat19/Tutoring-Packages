@@ -1,25 +1,10 @@
 import * as React from 'react';
-import{useState, useEffect, useContext} from "react";
+import{useState, useEffect} from "react";
 import calcHoursAndCost from "./calcHoursAndCost";
 import {juniorDeveloperProjects}  from "./juniorDeveloperProjects";
 import './styles/courses.css';
-import cartContext from "../../contexts/cartContext";
-let unParsedcart:string = localStorage.getItem(`Shopping Cart`) || `[]`;
-let emptyCart = JSON.parse(unParsedcart) || [] as any;
-
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-        'person-info': PersonInfoProps
-        }
-    }
-}
-
-interface PersonInfoProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
-    heading: string,
-    subHeading: string,
-    size?: string
-}
+let unParsedcart:any = localStorage.getItem(`Shopping Cart`);
+let emptyCart = JSON.parse(unParsedcart) || [];
 
 const JuniorDeveloperCourse: React.FC = () => {
 
@@ -38,10 +23,6 @@ const JuniorDeveloperCourse: React.FC = () => {
         setJuniorCost(localStorage.getItem(`Junior Developer Cost`))
         setJuniorHours(localStorage.getItem(`Junior Developer Hours`))
         setJuniorProjects(juniorApps.length);
-
-        // Start Draggable
-        // const slider = document.querySelector(`.junior .projects`);
-        // console.log(slider);
 
     }, []);
 
@@ -73,7 +54,7 @@ const JuniorDeveloperCourse: React.FC = () => {
                                     </div>
                                     <p className="projectDescription">
                                         <span className="desc">{project.description}</span>
-                                        <img src={project.picture} alt="Project Example Picture" className="projectPic" />
+                                        <img src={project.picture} alt={project?.title} className="projectPic" />
                                         <p className="technologies">
                                             {project.technologies.map((tech:any,index:any) => (
                                                 <span key={index+1+`-`+tech} id={tech} className="technology"> - {tech}</span>
@@ -100,15 +81,13 @@ const JuniorDeveloperCourse: React.FC = () => {
                                         let cartNum:number = updatedCart.length
 
                                         cartItems.innerHTML = cartNum;
-
-                                        // let cart = JSON.parse(localStorage.getItem(`Shopping Cart`)) || [] as any;
                                     
                                         if (updatedCart.length > 0) {
-                                        document.querySelector(`#cartItems`)?.classList.remove(`hide`);
-                                        document.querySelector(`#cartItems`)?.classList.add(`show`);
+                                            document.querySelector(`#cartItems`)?.classList.remove(`hide`);
+                                            document.querySelector(`#cartItems`)?.classList.add(`show`);
                                         } else {
-                                        document.querySelector(`#cartItems`)?.classList.add(`hide`);
-                                        document.querySelector(`#cartItems`)?.classList.remove(`show`);
+                                            document.querySelector(`#cartItems`)?.classList.add(`hide`);
+                                            document.querySelector(`#cartItems`)?.classList.remove(`show`);
                                         }
 
                                         console.log(updatedCart);

@@ -1,26 +1,40 @@
 {
-  "name": "react-netflix-clone",
+  "name": "tutoring-packages",
   "version": "0.1.0",
   "private": true,
+  "resolutions": {
+    "//": "See https://github.com/facebook/create-react-app/issues/11773",
+    "react-error-overlay": "6.0.9"
+  },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.8",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "@types/react": "^17.0.38",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.4",
+    "@types/react": "^17.0.38",
     "@types/react-dom": "16.9.0",
     "chart.js": "^3.6.1",
+    "concurrently": "^5.3.0",
+    "dotenv": "^14.2.0",
     "express": "^4.17.1",
-    "jquery": "^3.6.0",
+    "firebase": "^9.6.3",
     "lottie-web": "^5.8.1",
+    "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.0",
     "react-dom": "^17.0.2",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-moment": "^1.1.1",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "react-slidy": "^4.3.3",
-    "typescript": "^4.5.4",
+    "ts-node": "8.10.1",
+    "typeorm": "0.2.25",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -29,7 +43,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "develop": "npm install && npm run build && npm start"
   },
   "eslintConfig": {
     "extends": [
@@ -48,5 +63,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/react-lazy-load-image-component": "^1.5.2",
+    "typescript": "^4.5.5"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }

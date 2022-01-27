@@ -7,6 +7,9 @@ header {
   color: white;
   font-family: montserrat;
   padding: 1.5em 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   .inner {
     display: flex;
     justify-content: space-between;
